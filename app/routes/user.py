@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from app.db.crud import save_performance
-from app.services.recommendation_service import get_weak_topics
+from app.services.recommendation_service import get_weak_topics, get_recommendations
 
 router=APIRouter()
 
@@ -22,4 +22,13 @@ def weak_topics(user_id:str):
     return {
         "user_id": user_id,
         "weak_topics": topics
+    }
+
+@router.get('/recommendations')
+def recommendations(user_id:str):
+    data=get_recommendations(user_id)
+
+    return {
+        'user_id': user_id,
+        'recommendations': data
     }

@@ -5,6 +5,8 @@ venv/
 .env.*
 *.sqlite3
 
+learning.db
+
 # OS
 .DS_Store
 Thumbs.db

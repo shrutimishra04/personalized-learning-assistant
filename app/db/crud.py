@@ -1,6 +1,11 @@
 from app.db.database import get_connection
 
 def save_performance(user_id:str, topic:str,score:int):
+    topic=topic.strip().lower()
+
+    if topic.endswith('s'):
+        topic=topic[:-1]
+
     conn=get_connection()
     cursor=conn.cursor()
 
