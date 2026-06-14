@@ -4,3 +4,8 @@ langchain==0.1.20
 langchain-openai
 openai
 python-dotenv
+pymupdf
+faiss-cpu
+sentence-transformers
+langchain-community
+rank-bm25
